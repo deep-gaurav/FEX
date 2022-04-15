@@ -193,7 +193,7 @@ def UpdatePPA():
 
     DidUpdate = False
     try:
-        CmdResult = subprocess.call(["sudo", "apt-get", "update"])
+        CmdResult = subprocess.call([ "apt-get", "update"])
         DidUpdate = CmdResult == 0
     except KeyboardInterrupt:
         DidUpdate = False
@@ -233,7 +233,7 @@ def CheckAndInstallPackageUpdates():
 
         DidInstall = False
         try:
-            CmdResult = subprocess.call(["sudo", "apt-get", "-y", "install"] + PackagesToInstall)
+            CmdResult = subprocess.call([ "apt-get", "-y", "install"] + PackagesToInstall)
             DidInstall = CmdResult == 0
         except KeyboardInterrupt:
             print ("Keyboard interrupt")
@@ -263,7 +263,7 @@ def InstallPackages(Packages):
 
     DidInstall = False
     try:
-        CmdResult = subprocess.call(["sudo", "apt-get", "-y", "install"] + Packages)
+        CmdResult = subprocess.call([ "apt-get", "-y", "install"] + Packages)
         DidInstall = CmdResult == 0
     except KeyboardInterrupt:
         print ("Keyboard interrupt")
