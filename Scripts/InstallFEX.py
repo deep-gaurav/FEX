@@ -159,7 +159,7 @@ def InstallPPA():
 
     DidInstall = False
     try:
-        CmdResult = subprocess.call(["sudo", "add-apt-repository", "-y", "ppa:fex-emu/fex"])
+        CmdResult = subprocess.call([ "add-apt-repository", "-y", "ppa:fex-emu/fex"])
         DidInstall = CmdResult == 0
     except KeyboardInterrupt:
         DidInstall = False
